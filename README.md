@@ -18,7 +18,7 @@ linear_regression_model/
 |   |-- API/
 |   |-- FlutterApp/
 |   |-- linear_regression/
-|   |   |  |-- models/
+|   |   |   |-- models/
 |   |   |-- multivariate.ipynb
 |   |   |-- StudentPerformanceFactors.csv
 ```
