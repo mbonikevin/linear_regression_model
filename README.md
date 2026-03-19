@@ -39,4 +39,3 @@ the best performing model gets saved to be used in the API
    - if the kernel still fails, click `Change Kernel` in the popup and select the **venv interpreter** from the list
    - if you still don't see it, click `Enter interpreter path` and type **./venv/bin/python** manually
 3. Run all cells from top to bottom
-4. The best model will be saved to a models folder automatically
