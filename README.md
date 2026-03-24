@@ -8,7 +8,6 @@ Dataset source: https://www.kaggle.com/datasets/lainguyn123/student-performance-
 Models being used: linear regression, decision tree regressor, and random forest regressor, all from scikit-learn
 
 
-
 ## Repo structure
 
 ```
@@ -16,9 +15,13 @@ linear_regression_model/
 |
 |-- summative/
 |   |-- API/
+|   |   |-- main.py
+|   |   |-- requirements.txt
 |   |-- FlutterApp/
 |   |-- linear_regression/
-|   |   |   |-- models/
+|   |   |-- models/
+|   |   |   |-- best_model.pkl
+|   |   |   |-- scaler.pkl
 |   |   |-- multivariate.ipynb
 |   |   |-- StudentPerformanceFactors.csv
 ```
@@ -30,7 +33,7 @@ linear_regression_model/
 
 the best performing model gets saved to be used in the API
 
-## How to run
+## How to run the notebook
 1. Create a virtual environment and install dependencies:
    - create the venv: python3 -m venv venv
    - activate it (linux/mac): source venv/bin/activate
@@ -40,3 +43,16 @@ the best performing model gets saved to be used in the API
    - if the kernel still fails, click `Change Kernel` in the popup and select the **venv interpreter** from the list
    - if you still don't see it, click `Enter interpreter path` and type **./venv/bin/python** manually
 3. Run all cells from top to bottom
+
+## How to run the API locally
+1. Activate the virtual environment and install the api dependencies:
+   - source venv/bin/activate
+   - pip install -r summative/API/requirements.txt
+2. Start the server:
+   - uvicorn summative.API.main:app --reload
+3. Open your browser and go to http://127.0.0.1:8000/docs and test the API
+
+## Live API
+The API is hosted on Render and can be accessed at: [https://linear-regression-model-ihll.onrender.com/]
+
+use the `/docs` page to test it interactively and the `/predict` endpoint with a POST request 
