@@ -87,7 +87,7 @@ def predict(info: StudentInfo):
     scaled = my_scaler.transform(nums)
     score = my_model.predict(scaled)[0]
 
-    return {"predicted_exam_score_is": round(float(score), 2)}
+    return {"predicted_exam_score": round(float(score), 2)}
 
 
 @app.post("/retrain")
