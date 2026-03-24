@@ -55,4 +55,4 @@ the best performing model gets saved to be used in the API
 ## Live API
 The API is hosted on Render and can be accessed at: [https://linear-regression-model-ihll.onrender.com/]
 
-use the `/docs` page to test it interactively and the `/predict` endpoint with a POST request 
+use the `/docs` page to test it interactively and the `/predict` endpoint to make predictions and also the `/retrain` endpoint to retrain the model by uploading a new csv file
