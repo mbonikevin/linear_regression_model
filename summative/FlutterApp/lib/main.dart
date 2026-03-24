@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
         final data = jsonDecode(res.body);
         setState(() { result = 'Predicted Score: ${data['predicted_exam_score']}'; isError = false; });
       } else {
-        setState(() { result = 'Something went wrong (${res.statusCode})'; isError = true; });
+        setState(() { result = 'Error ${res.statusCode}: ${res.body}'; isError = true; });
       }
     } catch (e) {
       setState(() { result = 'Could not reach server'; isError = true; });

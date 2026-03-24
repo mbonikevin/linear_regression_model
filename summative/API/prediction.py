@@ -18,6 +18,7 @@ app.add_middleware(
         "http://localhost",
         "http://localhost:3000",
         "http://localhost:8080",
+        "http://localhost:34065",
         "https://linear-regression-model-ihll.onrender.com",
     ],
     allow_credentials=True,

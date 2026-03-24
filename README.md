@@ -15,7 +15,7 @@ linear_regression_model/
 |
 |-- summative/
 |   |-- API/
-|   |   |-- main.py
+|   |   |-- prediction.py
 |   |   |-- requirements.txt
 |   |-- FlutterApp/
 |   |-- linear_regression/
@@ -49,10 +49,23 @@ the best performing model gets saved to be used in the API
    - source venv/bin/activate
    - pip install -r summative/API/requirements.txt
 2. Start the server:
-   - uvicorn summative.API.main:app --reload
+   - uvicorn summative.API.prediction:app --reload
 3. Open your browser and go to http://127.0.0.1:8000/docs and test the API
 
+## How to run the Flutter app
+1. Make sure you have Flutter installed: https://docs.flutter.dev/get-started/install
+2. Connect an Android or iOS device, or start an emulator
+3. Navigate to the Flutter app folder:
+   - cd summative/FlutterApp
+4. Install dependencies:
+   - flutter pub get
+5. Run the app:
+   - flutter run
+
+## Video Demo
+[link to video demo on YouTube](https://youtu.be/VDZeyNBkD-k)
+
 ## Live API
-The API is hosted on Render and can be accessed at: [https://linear-regression-model-ihll.onrender.com/]
+The API is hosted on Render: [https://linear-regression-model-ihll.onrender.com/docs](https://linear-regression-model-ihll.onrender.com/docs)
 
 use the `/docs` page to test it interactively and the `/predict` endpoint to make predictions and also the `/retrain` endpoint to retrain the model by uploading a new csv file
