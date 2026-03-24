@@ -9,10 +9,15 @@ app = FastAPI(title="student score predictor")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost",
+        "http://localhost:3000",
+        "http://localhost:8080",
+        "https://linear-regression-model-ihll.onrender.com",
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "Authorization", "Accept"],
 )
 
 # declaring my model and scaler files
